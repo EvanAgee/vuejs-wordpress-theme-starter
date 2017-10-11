@@ -1,5 +1,5 @@
 <template>
-  <div id="my-app">
+  <div id="my-app" class="page-wrapper">
     <transition
       name="loader-animation"
       enter-active-class="animated fadeIn"
@@ -12,7 +12,9 @@
     <app-header></app-header>
 
     <transition name="page-transition" mode="out-in" appear>
-      <router-view></router-view>
+      <div class="page-content-wrapper">
+        <router-view></router-view>
+      </div>
     </transition>
 
     <app-footer></app-footer>

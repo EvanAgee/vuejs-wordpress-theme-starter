@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 // Components
-// import Splash from '../components/Splash'
+import Home from '../components/Home'
 
 Vue.use(Router)
 
@@ -11,7 +11,7 @@ const router = new Router({
     {
       path: '/',
       name: 'Home',
-      // component: Home,
+      component: Home,
       // props: { pageContentID: 383 }
     }
   ],
