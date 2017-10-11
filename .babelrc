@@ -1,5 +1,4 @@
 {
-    "presets": ["stage-2"],
-    "plugins": ["transform-object-rest-spread"]
-  }
-  
+  "presets": ["stage-2"],
+  "plugins": ["transform-object-rest-spread"]
+}

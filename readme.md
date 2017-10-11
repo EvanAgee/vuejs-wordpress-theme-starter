@@ -1,3 +1,5 @@
+![image](http://res.cloudinary.com/evanagee/image/upload/v1507763167/VueWP/vue-wordpress-sitting-in-a-tree.jpg)
+
 # vuejs-wordpress-theme-starter
 A true WordPress theme with the guts ripped out and replaced with Vue. Based on the [BlankSlate](https://github.com/tidythemes/blankslate) WP starter theme.
 
@@ -17,13 +19,13 @@ A true WordPress theme with the guts ripped out and replaced with Vue. Based on 
 
 ## Getting started
 - Clone the repo inside of your `wp-content/themes/` directory
-- Navigate to the theme directory and run  
-    `npm install`  
-    `npm run watch` for development  
+- Navigate to the theme directory and run
+    `npm install`
+    `npm run watch` for development
     `npm run production` when you're ready to deploy the theme.
 
 ## Code Organization
-All of the code you're going to edit is located in `/src/`. From there it's broken into a few logical directories. 
+All of the code you're going to edit is located in `/src/`. From there it's broken into a few logical directories.
 
 - `/src`
   - `/api` for API requests
