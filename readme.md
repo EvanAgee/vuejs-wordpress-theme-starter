@@ -13,6 +13,7 @@ A true WordPress theme with the guts ripped out and replaced with Vue. Based on 
 - Bare essentials needed for a functional WordPress theme
 - All requests are redirected back to the index.php so your Vue routing is respected.
 - SCSS support
+- Bootstrap 4 Beta
 
 ## Getting started
 - Clone the repo inside of your `wp-content/themes/` directory
