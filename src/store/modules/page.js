@@ -10,10 +10,17 @@ const state = {
 
 // getters
 const getters = {
+  allPages: state => state.all,
   allPagesLoaded: state => state.loaded,
   pageContent: state => (id) => {
     let page = state.all.filter(page => page.id === id)
     return !_.isNull(_.first(page).content.rendered) ? _.first(page).content.rendered : false
+  },
+  somePages: state => (limit) => {
+    if (state.all.length < 1) { return false }
+    let all = [...state.all]
+    console.log(all)
+    return all.splice(0, Math.min(limit, state.all.length))
   }
 }
 

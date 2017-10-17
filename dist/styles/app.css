@@ -13388,6 +13388,10 @@ a.text-dark:focus, a.text-dark:hover {
           flex: 1;
 }
 
+.widget ul {
+  margin-left: 2rem;
+}
+
 .loader {
   position: fixed;
   top: 0;

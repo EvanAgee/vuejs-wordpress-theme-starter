@@ -9,8 +9,29 @@
                 <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
             </p>
         </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <recent-posts-widget limit="5">Recent Posts</recent-posts-widget>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <pages-widget limit="5">Pages</pages-widget>
+            </div>
+        </div>
     </div>
 </template>
+
+<script>
+import RecentPostsWidget from './widgets/RecentPosts'
+import PagesWidget from './widgets/Pages'
+
+export default {
+    components: {
+        RecentPostsWidget,
+        PagesWidget
+    }
+}
+</script>
 
 <style lang="scss">
     .jumbotron {

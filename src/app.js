@@ -2,7 +2,7 @@ window.SETTINGS = {
   // How many different dispatched actions determine loading progress
   // This is likely determined by how many dispatched actions you have below
   // in the created() method
-  LOADING_SEGMENTS: 3,
+  LOADING_SEGMENTS: 2,
   API_BASE_PATH: '/wp-json/wp/v2/'
 }
 
@@ -40,7 +40,6 @@ new Vue({
     this.$store.commit(types.RESET_LOADING_PROGRESS)
     this.$store.dispatch('getAllCategories')
     this.$store.dispatch('getAllPages')
-    this.$store.dispatch('getAllPosts')
 
     // Once user is signed in/out, uncomment if you need Firebase authentication
     // auth.onAuthStateChanged(user => {

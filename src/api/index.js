@@ -30,9 +30,10 @@ export default {
       })
   },
 
-  getPosts (cb) {
-    // Because of WordPress REST API limitations we can only fetch 100 entries at once, probably for the best anyway.
-    axios.get(window.SETTINGS.API_BASE_PATH + 'posts?per_page=100')
+  getPosts (limit, cb) {
+    if (_.isEmpty(limit)) { let limit = 5 }
+    
+    axios.get(window.SETTINGS.API_BASE_PATH + 'posts?per_page='+limit)
       .then(response => {
         cb(response.data)
       })
