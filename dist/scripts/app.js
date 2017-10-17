@@ -4568,6 +4568,14 @@ module.exports = Component.exports
     }).catch(function (e) {
       cb(e);
     });
+  },
+  getPosts: function getPosts(cb) {
+    // Because of WordPress REST API limitations we can only fetch 100 entries at once, probably for the best anyway.
+    axios.get(window.SETTINGS.API_BASE_PATH + 'posts?per_page=100').then(function (response) {
+      cb(response.data);
+    }).catch(function (e) {
+      cb(e);
+    });
   }
 });
 
@@ -4594,7 +4602,7 @@ window.SETTINGS = {
   // How many different dispatched actions determine loading progress
   // This is likely determined by how many dispatched actions you have below
   // in the created() method
-  LOADING_SEGMENTS: 2,
+  LOADING_SEGMENTS: 3,
   API_BASE_PATH: '/wp-json/wp/v2/'
 };
 
@@ -4630,9 +4638,10 @@ new __WEBPACK_IMPORTED_MODULE_1_vue___default.a({
     return h(__WEBPACK_IMPORTED_MODULE_5__App_vue___default.a);
   },
   created: function created() {
-    this.$store.commit(__WEBPACK_IMPORTED_MODULE_7__store_mutation_types__["f" /* RESET_LOADING_PROGRESS */]);
+    this.$store.commit(__WEBPACK_IMPORTED_MODULE_7__store_mutation_types__["g" /* RESET_LOADING_PROGRESS */]);
     this.$store.dispatch('getAllCategories');
     this.$store.dispatch('getAllPages');
+    this.$store.dispatch('getAllPosts');
 
     // Once user is signed in/out, uncomment if you need Firebase authentication
     // auth.onAuthStateChanged(user => {
@@ -4979,7 +4988,7 @@ var state = {
     var commit = _ref.commit;
 
     __WEBPACK_IMPORTED_MODULE_0__api__["a" /* default */].getCategories(function (categories) {
-      commit(__WEBPACK_IMPORTED_MODULE_1__mutation_types__["g" /* STORE_FETCHED_CATEGORIES */], { categories: categories });
+      commit(__WEBPACK_IMPORTED_MODULE_1__mutation_types__["h" /* STORE_FETCHED_CATEGORIES */], { categories: categories });
       commit(__WEBPACK_IMPORTED_MODULE_1__mutation_types__["a" /* CATEGORIES_LOADED */], true);
       commit(__WEBPACK_IMPORTED_MODULE_1__mutation_types__["b" /* INCREMENT_LOADING_PROGRESS */]);
     });
@@ -4987,7 +4996,7 @@ var state = {
 };
 
 // mutations
-var mutations = (_mutations = {}, _defineProperty(_mutations, __WEBPACK_IMPORTED_MODULE_1__mutation_types__["g" /* STORE_FETCHED_CATEGORIES */], function (state, _ref2) {
+var mutations = (_mutations = {}, _defineProperty(_mutations, __WEBPACK_IMPORTED_MODULE_1__mutation_types__["h" /* STORE_FETCHED_CATEGORIES */], function (state, _ref2) {
   var categories = _ref2.categories;
 
   state.all = categories;
@@ -5042,7 +5051,7 @@ var state = {
 // mutations
 var mutations = (_mutations = {}, _defineProperty(_mutations, __WEBPACK_IMPORTED_MODULE_1__mutation_types__["b" /* INCREMENT_LOADING_PROGRESS */], function (state, val) {
   state.loading_progress = Math.min(state.loading_progress + getters.loadingIncrement(), 100);
-}), _defineProperty(_mutations, __WEBPACK_IMPORTED_MODULE_1__mutation_types__["f" /* RESET_LOADING_PROGRESS */], function (state) {
+}), _defineProperty(_mutations, __WEBPACK_IMPORTED_MODULE_1__mutation_types__["g" /* RESET_LOADING_PROGRESS */], function (state) {
   state.loading_progress = 0;
 }), _mutations);
 
@@ -5094,7 +5103,7 @@ var state = {
     var commit = _ref.commit;
 
     __WEBPACK_IMPORTED_MODULE_0__api__["a" /* default */].getPages(function (pages) {
-      commit(__WEBPACK_IMPORTED_MODULE_1__mutation_types__["h" /* STORE_FETCHED_PAGES */], { pages: pages });
+      commit(__WEBPACK_IMPORTED_MODULE_1__mutation_types__["i" /* STORE_FETCHED_PAGES */], { pages: pages });
       commit(__WEBPACK_IMPORTED_MODULE_1__mutation_types__["e" /* PAGES_LOADED */], true);
       commit(__WEBPACK_IMPORTED_MODULE_1__mutation_types__["b" /* INCREMENT_LOADING_PROGRESS */]);
     });
@@ -5102,7 +5111,7 @@ var state = {
 };
 
 // mutations
-var mutations = (_mutations = {}, _defineProperty(_mutations, __WEBPACK_IMPORTED_MODULE_1__mutation_types__["h" /* STORE_FETCHED_PAGES */], function (state, _ref2) {
+var mutations = (_mutations = {}, _defineProperty(_mutations, __WEBPACK_IMPORTED_MODULE_1__mutation_types__["i" /* STORE_FETCHED_PAGES */], function (state, _ref2) {
   var pages = _ref2.pages;
 
   state.all = pages;
@@ -5135,42 +5144,37 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 // initial state
 var state = {
   all: [],
-  loaded: false,
-  page: null
+  recent: [],
+  loaded: false
 
   // getters
 };var getters = {
-  allPagesLoaded: function allPagesLoaded(state) {
-    return state.loaded;
+  allPosts: function allPosts(state) {
+    return state.all;
   },
-  pageContent: function pageContent(state) {
-    return function (id) {
-      var page = state.all.filter(function (page) {
-        return page.id === id;
-      });
-      return !_.isNull(_.first(page).content.rendered) ? _.first(page).content.rendered : false;
-    };
+  allPostsLoaded: function allPostsLoaded(state) {
+    return state.loaded;
   }
 
   // actions
 };var actions = {
-  getAllPages: function getAllPages(_ref) {
+  getAllPosts: function getAllPosts(_ref) {
     var commit = _ref.commit;
 
-    __WEBPACK_IMPORTED_MODULE_0__api__["a" /* default */].getPages(function (pages) {
-      commit(__WEBPACK_IMPORTED_MODULE_1__mutation_types__["h" /* STORE_FETCHED_PAGES */], { pages: pages });
-      commit(__WEBPACK_IMPORTED_MODULE_1__mutation_types__["e" /* PAGES_LOADED */], true);
+    __WEBPACK_IMPORTED_MODULE_0__api__["a" /* default */].getPosts(function (posts) {
+      commit(__WEBPACK_IMPORTED_MODULE_1__mutation_types__["j" /* STORE_FETCHED_POSTS */], { posts: posts });
+      commit(__WEBPACK_IMPORTED_MODULE_1__mutation_types__["f" /* POSTS_LOADED */], true);
       commit(__WEBPACK_IMPORTED_MODULE_1__mutation_types__["b" /* INCREMENT_LOADING_PROGRESS */]);
     });
   }
 };
 
 // mutations
-var mutations = (_mutations = {}, _defineProperty(_mutations, __WEBPACK_IMPORTED_MODULE_1__mutation_types__["h" /* STORE_FETCHED_PAGES */], function (state, _ref2) {
-  var pages = _ref2.pages;
+var mutations = (_mutations = {}, _defineProperty(_mutations, __WEBPACK_IMPORTED_MODULE_1__mutation_types__["j" /* STORE_FETCHED_POSTS */], function (state, _ref2) {
+  var posts = _ref2.posts;
 
-  state.all = pages;
-}), _defineProperty(_mutations, __WEBPACK_IMPORTED_MODULE_1__mutation_types__["e" /* PAGES_LOADED */], function (state, val) {
+  state.all = posts;
+}), _defineProperty(_mutations, __WEBPACK_IMPORTED_MODULE_1__mutation_types__["f" /* POSTS_LOADED */], function (state, val) {
   state.loaded = val;
 }), _mutations);
 
@@ -5211,7 +5215,7 @@ var state = {
 };var actions = {};
 
 // mutations
-var mutations = (_mutations = {}, _defineProperty(_mutations, __WEBPACK_IMPORTED_MODULE_1__mutation_types__["i" /* STORE_FETCHED_USER */], function (state, _ref) {
+var mutations = (_mutations = {}, _defineProperty(_mutations, __WEBPACK_IMPORTED_MODULE_1__mutation_types__["k" /* STORE_FETCHED_USER */], function (state, _ref) {
   var uid = _ref.uid;
 
   state.id = uid;
@@ -5234,20 +5238,25 @@ var mutations = (_mutations = {}, _defineProperty(_mutations, __WEBPACK_IMPORTED
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return STORE_FETCHED_CATEGORIES; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return STORE_FETCHED_CATEGORIES; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CATEGORIES_LOADED; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return STORE_FETCHED_PAGES; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return STORE_FETCHED_PAGES; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return PAGES_LOADED; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return STORE_FETCHED_USER; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return STORE_FETCHED_POSTS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return POSTS_LOADED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return STORE_FETCHED_USER; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return LOGIN_USER; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return LOGOUT_USER; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return INCREMENT_LOADING_PROGRESS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return RESET_LOADING_PROGRESS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return RESET_LOADING_PROGRESS; });
 var STORE_FETCHED_CATEGORIES = 'STORE_FETCHED_CATEGORIES';
 var CATEGORIES_LOADED = 'CATEGORIES_LOADED';
 
 var STORE_FETCHED_PAGES = 'STORE_FETCHED_PAGES';
 var PAGES_LOADED = 'PAGES_LOADED';
+
+var STORE_FETCHED_POSTS = 'STORE_FETCHED_POSTS';
+var POSTS_LOADED = 'POSTS_LOADED';
 
 var STORE_FETCHED_USER = 'STORE_FETCHED_USER';
 var LOGIN_USER = 'LOGIN_USER';

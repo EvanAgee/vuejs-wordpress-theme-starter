@@ -4,25 +4,22 @@ import * as types from '../mutation-types'
 // initial state
 const state = {
   all: [],
-  loaded: false,
-  page: null
+  recent: [],
+  loaded: false
 }
 
 // getters
 const getters = {
-  allPagesLoaded: state => state.loaded,
-  pageContent: state => (id) => {
-    let page = state.all.filter(page => page.id === id)
-    return !_.isNull(_.first(page).content.rendered) ? _.first(page).content.rendered : false
-  }
+  allPosts: state => state.all,
+  allPostsLoaded: state => state.loaded
 }
 
 // actions
 const actions = {
-  getAllPages ({ commit }) {
-    api.getPages(pages => {
-      commit(types.STORE_FETCHED_PAGES, { pages })
-      commit(types.PAGES_LOADED, true)
+  getAllPosts ({ commit }) {
+    api.getPosts(posts => {
+      commit(types.STORE_FETCHED_POSTS, { posts })
+      commit(types.POSTS_LOADED, true)
       commit(types.INCREMENT_LOADING_PROGRESS)
     })
   }
@@ -30,11 +27,11 @@ const actions = {
 
 // mutations
 const mutations = {
-  [types.STORE_FETCHED_PAGES] (state, { pages }) {
-    state.all = pages
+  [types.STORE_FETCHED_POSTS] (state, { posts }) {
+    state.all = posts
   },
 
-  [types.PAGES_LOADED] (state, val) {
+  [types.POSTS_LOADED] (state, val) {
     state.loaded = val
   }
 }

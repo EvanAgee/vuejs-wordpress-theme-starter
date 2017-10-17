@@ -28,5 +28,16 @@ export default {
       .catch(e => {
         cb(e)
       })
-  }
+  },
+
+  getPosts (cb) {
+    // Because of WordPress REST API limitations we can only fetch 100 entries at once, probably for the best anyway.
+    axios.get(window.SETTINGS.API_BASE_PATH + 'posts?per_page=100')
+      .then(response => {
+        cb(response.data)
+      })
+      .catch(e => {
+        cb(e)
+      })
+  },
 }
