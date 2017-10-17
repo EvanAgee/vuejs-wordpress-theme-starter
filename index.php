@@ -1,3 +1,3 @@
-<?php wp_head(); ?>
+<?php get_header(); ?>
 <div id="app"></div>
-<?php wp_footer(); ?>
+<?php get_footer(); ?>

@@ -49,6 +49,7 @@ export default {
   },
 
   watch: {
+    // watch the value of isLoading and once it's false hide the loader
     isLoading(val) {
       if (val == false) {
         let self = this

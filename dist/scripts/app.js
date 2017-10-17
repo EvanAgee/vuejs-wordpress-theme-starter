@@ -62,6 +62,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
   },
 
   watch: {
+    // watch the value of isLoading and once it's false hide the loader
     isLoading: function isLoading(val) {
       if (val == false) {
         var self = this;
@@ -4904,8 +4905,10 @@ var loginUser = function loginUser(_ref) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__getters___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__getters__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__modules_hub__ = __webpack_require__("./src/store/modules/hub.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__modules_user__ = __webpack_require__("./src/store/modules/user.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__modules_page__ = __webpack_require__("./src/store/modules/page.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__modules_categories__ = __webpack_require__("./src/store/modules/categories.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__modules_post__ = __webpack_require__("./src/store/modules/post.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__modules_page__ = __webpack_require__("./src/store/modules/page.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__modules_categories__ = __webpack_require__("./src/store/modules/categories.js");
+
 
 
 
@@ -4932,8 +4935,9 @@ var localStorage = __WEBPACK_IMPORTED_MODULE_2_vuex_localstorage___default()({
   modules: {
     hub: __WEBPACK_IMPORTED_MODULE_5__modules_hub__["a" /* default */],
     user: __WEBPACK_IMPORTED_MODULE_6__modules_user__["a" /* default */],
-    page: __WEBPACK_IMPORTED_MODULE_7__modules_page__["a" /* default */],
-    categories: __WEBPACK_IMPORTED_MODULE_8__modules_categories__["a" /* default */]
+    post: __WEBPACK_IMPORTED_MODULE_7__modules_post__["a" /* default */],
+    page: __WEBPACK_IMPORTED_MODULE_8__modules_page__["a" /* default */],
+    categories: __WEBPACK_IMPORTED_MODULE_9__modules_categories__["a" /* default */]
   },
   strict: debug,
   plugins: [localStorage]
@@ -5052,6 +5056,70 @@ var mutations = (_mutations = {}, _defineProperty(_mutations, __WEBPACK_IMPORTED
 /***/ }),
 
 /***/ "./src/store/modules/page.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__api__ = __webpack_require__("./src/api/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__mutation_types__ = __webpack_require__("./src/store/mutation-types.js");
+var _mutations;
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+// initial state
+var state = {
+  all: [],
+  loaded: false,
+  page: null
+
+  // getters
+};var getters = {
+  allPagesLoaded: function allPagesLoaded(state) {
+    return state.loaded;
+  },
+  pageContent: function pageContent(state) {
+    return function (id) {
+      var page = state.all.filter(function (page) {
+        return page.id === id;
+      });
+      return !_.isNull(_.first(page).content.rendered) ? _.first(page).content.rendered : false;
+    };
+  }
+
+  // actions
+};var actions = {
+  getAllPages: function getAllPages(_ref) {
+    var commit = _ref.commit;
+
+    __WEBPACK_IMPORTED_MODULE_0__api__["a" /* default */].getPages(function (pages) {
+      commit(__WEBPACK_IMPORTED_MODULE_1__mutation_types__["h" /* STORE_FETCHED_PAGES */], { pages: pages });
+      commit(__WEBPACK_IMPORTED_MODULE_1__mutation_types__["e" /* PAGES_LOADED */], true);
+      commit(__WEBPACK_IMPORTED_MODULE_1__mutation_types__["b" /* INCREMENT_LOADING_PROGRESS */]);
+    });
+  }
+};
+
+// mutations
+var mutations = (_mutations = {}, _defineProperty(_mutations, __WEBPACK_IMPORTED_MODULE_1__mutation_types__["h" /* STORE_FETCHED_PAGES */], function (state, _ref2) {
+  var pages = _ref2.pages;
+
+  state.all = pages;
+}), _defineProperty(_mutations, __WEBPACK_IMPORTED_MODULE_1__mutation_types__["e" /* PAGES_LOADED */], function (state, val) {
+  state.loaded = val;
+}), _mutations);
+
+/* harmony default export */ __webpack_exports__["a"] = ({
+  state: state,
+  getters: getters,
+  actions: actions,
+  mutations: mutations
+});
+
+/***/ }),
+
+/***/ "./src/store/modules/post.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
