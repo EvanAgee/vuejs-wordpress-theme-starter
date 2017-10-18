@@ -39,7 +39,7 @@ export default {
     }),
 
     loaderStyle() {
-      return 'width: ' + this.loadingProgress + '%; '
+      return `width: ${this.loadingProgress}%;`
     }
   },
 
