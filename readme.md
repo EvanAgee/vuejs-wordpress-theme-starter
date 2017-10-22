@@ -15,9 +15,12 @@ A true WordPress theme with the guts ripped out and replaced with Vue. Based on 
 - Bare essentials needed for a functional WordPress theme
 - All requests are redirected back to the index.php so your Vue routing is respected.
 - SCSS support
-- Bootstrap 4 Beta
+- Bootstrap-Vue integrated
 
 ## Getting started
+
+[![Watch the getting started video](http://res.cloudinary.com/evanagee/image/upload/v1508649085/VueWP/youtube.jpg)](https://www.youtube.com/watch?v=dFTsbSRJuIw)
+
 - Clone the repo inside of your `wp-content/themes/` directory
 - Navigate to the theme directory and run
     `npm install`
