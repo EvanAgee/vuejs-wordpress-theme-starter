@@ -19,7 +19,6 @@ const getters = {
   somePages: state => (limit) => {
     if (state.all.length < 1) { return false }
     let all = [...state.all]
-    console.log(all)
     return all.splice(0, Math.min(limit, state.all.length))
   }
 }

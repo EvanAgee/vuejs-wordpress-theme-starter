@@ -1,12 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Roboto+Slab:400,700');
 
-// Custom bootstrap variables overrides
 @import "variables";
-
-// Import npm dependencies
-@import "~the-tailor/tailor";
-@import "~bootstrap/scss/bootstrap";
-@import "~animate.css/animate.css";
 
 // Common
 @import "common/global";

@@ -1,5 +1,21 @@
-## 2017-10-17
+## 2017-10-21
+### Removed
+- vue-slick dependency
+- vue2-google-maps dependency
+- unnecessary header/footer php files
+- the-tailor dependency
+- font-awesome dependency
 
+### Changed
+- Updated webpack (Larevel Mix) config
+- Switched from Bootstrap to [Bootstrap-Vue](https://bootstrap-vue.js.org)
+
+### Fixed
+- Fixed index.php
+
+---------
+
+## 2017-10-17
 ### Added
 - More documnentation. @EvanAgee
 - Post module. @EvanAgee

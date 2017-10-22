@@ -19,10 +19,15 @@ mix.setPublicPath('dist')
       'babel-polyfill',
       'lodash',
       'tether',
-      'vue'
+      'vue',
+      'bootstrap-vue',
+      'vuex',
+      'vuex-localstorage'
    ])
    .sass('src/styles/app.scss', 'styles/')
+   .copyDirectory('src/assets', 'dist/assets')
    .options({
       processCssUrls: false,
+      uglify: true
     })
    .version();
