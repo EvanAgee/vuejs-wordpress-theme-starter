@@ -1,3 +1,7 @@
+## 2017-10-24
+### Added
+- status_header(200) to keep Wordpress from returning 404 for vue-router paths.
+
 ## 2017-10-21
 ### Removed
 - vue-slick dependency
