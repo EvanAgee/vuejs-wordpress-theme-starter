@@ -42,9 +42,7 @@ export default {
       })
   },
 
-  getSetting (name, cb) {
-    if (_.isEmpty(name)) { return }
-
+  getSettings (cb) {
     axios.get(window.SETTINGS.API_BASE_PATH + 'settings/')
       .then(response => {
         cb(response.data)

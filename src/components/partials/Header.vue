@@ -3,7 +3,7 @@
 
         <b-nav-toggle target="nav_collapse"></b-nav-toggle>
 
-        <b-navbar-brand href="#">Site Title Here: {{ settings.name }}</b-navbar-brand>
+        <b-navbar-brand href="#">Site Title Here: {{ settings.title }}</b-navbar-brand>
 
         <b-collapse is-nav id="nav_collapse">
 
@@ -55,7 +55,7 @@ export default {
   },
 
   mounted() {
-    this.$store.dispatch('fetchSetting', { name: 'title' })
+    this.$store.dispatch('fetchSettings')
   }
 }
 </script>

@@ -4,8 +4,7 @@ import * as types from '../mutation-types'
 // initial state
 const state = {
   all: [],
-  loaded: false,
-  test: 'abc'
+  loaded: false
 }
 
 // getters
@@ -15,16 +14,16 @@ const getters = {
 
 // actions
 const actions = {
-  fetchSetting({ commit }, { name }) {
-    if(state.all.name) {
-      return state.all.name;
+  fetchSettings({ commit }) {
+    if(state.loaded) {
+      return state.all;
     }
 
-    api.getSetting( name, setting => { 
-      commit(types.STORE_FETCHED_SETTINGS, { setting })
+    api.getSettings( settings => {
+      commit(types.STORE_FETCHED_SETTINGS, { settings })
       commit(types.SETTINGS_LOADED, true)
 
-      return setting;
+      return settings;
     })
   }
 }
@@ -32,8 +31,8 @@ const actions = {
 // mutations
 const mutations = {
   
-  [types.STORE_FETCHED_SETTINGS] (state, { wpSetting }) { 
-    state.all.push(wpSetting);
+  [types.STORE_FETCHED_SETTINGS] (state, { settings }) {
+    state.all = settings;
   },
 
   [types.SETTINGS_LOADED] (state, val) {
