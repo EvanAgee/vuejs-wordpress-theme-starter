@@ -41,4 +41,14 @@ export default {
         cb(e)
       })
   },
+
+  getSettings (cb) {
+    axios.get(window.SETTINGS.API_BASE_PATH + 'settings/')
+      .then(response => {
+        cb(response.data)
+      })
+      .catch(e => {
+        cb(e)
+      })
+  },
 }
