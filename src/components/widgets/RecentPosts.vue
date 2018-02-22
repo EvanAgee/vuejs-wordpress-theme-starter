@@ -2,7 +2,9 @@
   <div class="widget recent-posts">
     <h3><slot></slot></h3>
     <ul v-if="recentPostsLoaded">
-      <li v-for="post in recentPosts(limit)" :key="post.id">{{ post.title.rendered }}</li>
+      <li v-for="post in recentPosts(limit)" :key="post.id">
+        <a :href="post.link">{{ post.title.rendered }}</a>
+      </li>
     </ul>
     <div v-else>
       Loading...

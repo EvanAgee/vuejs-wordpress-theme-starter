@@ -14,5 +14,10 @@ function load_vue_scripts() {
     wp_enqueue_script('blankslate/manifest.js', get_template_directory_uri() . '/dist/scripts/manifest.js', null, null, true);
     wp_enqueue_script('blankslate/vendor.js', get_template_directory_uri() . '/dist/scripts/vendor.js', null, null, true);
     wp_enqueue_script('blankslate/app.js', get_template_directory_uri() . '/dist/scripts/app.js', null, null, true);
+
+    wp_localize_script( 'blankslate/app.js', 'bsApp', array(
+    	'nonce' => wp_create_nonce('wp_rest'),
+    	'root' 	=> esc_url_raw( rest_url() )
+    ) );
 }
 add_action('wp_enqueue_scripts', 'load_vue_scripts', 100);
