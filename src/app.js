@@ -6,14 +6,12 @@ window.SETTINGS = {
   API_BASE_PATH: '/wp-json/wp/v2/'
 }
 
-import 'babel-polyfill'
-import Vue from 'vue'
-
 require('./bootstrap')
 
+import 'babel-polyfill'
+import Vue from 'vue'
 import VueRouter from 'vue-router'
 import VueLazyload from 'vue-lazyload'
-import VueAxios from 'vue-axios'
 
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
@@ -27,7 +25,6 @@ import * as types from './store/mutation-types'
 
 Vue.use(VueLazyload)
 Vue.use(BootstrapVue)
-Vue.use(VueAxios, axios)
 
 router.afterEach((to, from) => {
   // Add a body class specific to the route we're viewing
