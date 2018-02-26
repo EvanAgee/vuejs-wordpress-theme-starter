@@ -2,9 +2,7 @@
   <div class="widget pages">
     <h3><slot></slot></h3>
     <ul v-if="allPagesLoaded">
-      <li v-for="page in somePages(limit)" :key="page.id">
-        <a :href="page.link">{{ page.title.rendered }}</a>
-      </li>
+      <li v-for="page in somePages(limit)" :key="page.id">{{ page.title.rendered }}</li>
     </ul>
     <div v-else>
       Loading...

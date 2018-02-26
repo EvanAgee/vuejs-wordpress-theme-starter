@@ -3,12 +3,11 @@
 
         <b-nav-toggle target="nav_collapse"></b-nav-toggle>
 
-        <b-navbar-brand href="#">Site Title Here: {{ settings.title }}</b-navbar-brand>
+        <b-navbar-brand href="#">Vuejs Wordpress Theme Starter</b-navbar-brand>
 
         <b-collapse is-nav id="nav_collapse">
 
             <b-nav is-nav-bar>
-                Get Menu Here
             <b-nav-item href="#">Link</b-nav-item>
             <b-nav-item href="#" disabled>Disabled</b-nav-item>
             </b-nav>
@@ -41,27 +40,3 @@
         </b-collapse>
     </b-navbar>
 </template>
-
-
-<script>
-import { mapGetters } from 'vuex'
-
-export default {
-  props: null,
-  computed: {
-    ...mapGetters({
-      settings: 'getSettings'
-    })
-  },
-
-  mounted() {
-    this.$store.dispatch('fetchSettings')
-  }
-}
-</script>
-
-<style lang="scss" scoped>
-.navbar {
-    border: 1px solid #f0f;
-}
-</style>
