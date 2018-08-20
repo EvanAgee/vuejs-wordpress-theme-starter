@@ -2,6 +2,18 @@
 ### Added
 - status_header(200) to keep Wordpress from returning 404 for vue-router paths.
 
+## 2018-08-20
+### Added
+- Default routing for posts and pages. @EvanAgee
+- Views for posts and pages. @EvanAgee
+- getters for pages. @EvanAgee
+- Examples for fetching pages/posts with either Vuex actions OR in component. @EvanAgee
+- Activated LocalStorage plugin in store. @EvanAgee
+- Loader component. @EvanAgee
+
+### Removed
+- UglifyJS. @EvanAgee
+
 ## 2017-10-21
 ### Removed
 - vue-slick dependency

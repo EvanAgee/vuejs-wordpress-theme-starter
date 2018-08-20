@@ -30,5 +30,5 @@ export default new Vuex.Store({
     categories
   },
   strict: debug,
-  plugins: []
+  plugins: [localStorage]
 })

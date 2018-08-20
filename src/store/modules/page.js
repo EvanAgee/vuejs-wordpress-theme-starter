@@ -1,5 +1,6 @@
 import api from '../../api'
 import * as types from '../mutation-types'
+import { isNumber } from 'util';
 
 // initial state
 const state = {
@@ -12,8 +13,14 @@ const state = {
 const getters = {
   allPages: state => state.all,
   allPagesLoaded: state => state.loaded,
+  page: state => (id) => {
+    let field = typeof id === 'number' ? 'id' : 'slug';
+    let page = state.all.filter(page => page[field] === id)
+    return !_.isNull(_.first(page)) ? _.first(page) : false
+  },
   pageContent: state => (id) => {
-    let page = state.all.filter(page => page.id === id)
+    let field = typeof id === 'number' ? 'id' : 'slug';
+    let page = state.all.filter(page => page[field] === id)
     return !_.isNull(_.first(page).content.rendered) ? _.first(page).content.rendered : false
   },
   somePages: state => (limit) => {

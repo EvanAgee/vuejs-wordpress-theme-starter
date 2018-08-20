@@ -27,7 +27,6 @@ mix.setPublicPath('dist')
    .sass('src/styles/app.scss', 'styles/')
    .copyDirectory('src/assets', 'dist/assets')
    .options({
-      processCssUrls: false,
-      uglify: true
+      processCssUrls: false
     })
    .version();
