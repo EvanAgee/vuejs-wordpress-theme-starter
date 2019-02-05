@@ -1,5 +1,3 @@
 <template>
-    <footer class="footer">
-        This is the footer.
-    </footer>
+  <footer class="site-footer">This is the footer.</footer>
 </template>

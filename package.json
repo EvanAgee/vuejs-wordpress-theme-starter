@@ -1,10 +1,16 @@
 {
   "private": true,
   "scripts": {
-    "dev": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "production": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "dev": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=webpack.config.js",
+    "watch": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=webpack.config.js",
+    "production": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=webpack.config.js",
     "rmdist": "rimraf dist"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "stage-2"
+    ]
   },
   "devDependencies": {
     "axios": "^0.15.3",
@@ -13,25 +19,24 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-2": "^6.24.1",
-    "bootstrap": "^4.0.0-beta",
-    "bootstrap-vue": "^1.0.0-beta.9",
     "cross-env": "^3.2.4",
     "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.4",
-    "firebase": "^4.13.1",
-    "font-awesome": "^4.7.0",
-    "fs": "0.0.1-security",
-    "jquery": "^3.1.1",
-    "jslint": "^0.11.0",
-    "laravel-mix": "^1.7.2",
     "lodash": "^4.17.10",
-    "node-sass": "^4.9.2",
+    "normalize.css": "^8.0.0",
     "object-path": "^0.11.4",
-    "sass-lint": "^1.12.1",
-    "sass-loader": "^6.0.6",
-    "tether": "^1.4.0",
-    "tinymce": "^4.5.5",
+    "postcss-assets": "^5.0.0",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-hexrgba": "^1.0.0",
+    "postcss-import": "^11.1.0",
+    "postcss-inherit": "^4.0.3",
+    "postcss-loader": "^2.1.1",
+    "postcss-nested": "^3.0.0",
+    "postcss-reporter": "^5.0.0",
+    "postcss-sorting": "^3.1.0",
+    "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^1.2.5",
     "url-loader": "^0.6.2",
     "vue-lazyload": "^1.1.3",
     "vue-loader": "^13.0.5",
@@ -41,7 +46,8 @@
     "vuex": "^2.4.0",
     "vuex-localstorage": "^1.0.0",
     "webpack": "^3.12.0",
-    "webpack-dev-server": "^2.11.2"
+    "webpack-cli": "^2.0.12",
+    "webpack-dev-server": "^3.1.11"
   },
   "dependencies": {
     "vue": "2.4.4"
