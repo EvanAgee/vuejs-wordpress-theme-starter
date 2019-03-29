@@ -26,6 +26,11 @@ A true WordPress theme with the guts ripped out and replaced with Vue.
   `npm run watch` for development
   `npm run production` when you're ready to deploy the theme.
 
+## Video Training
+
+- [Getting Started](https://www.youtube.com/watch?v=dFTsbSRJuIw)
+- [How to add WordPress menu support](https://www.youtube.com/watch?v=fa_muCUHUuM)
+
 ## New to Vue?
 
 Not sure where to begin? The [Vuejs documentation](https://vuejs.org/v2/guide/) is actually amazing, but if you're looking for video training I highly recommend the free [Learn Vue 2: Step By Step](https://laracasts.com/series/learn-vue-2-step-by-step) course over at Laracasts. There's also a [great playlist by Academind](https://www.youtube.com/watch?v=FXY1UyQfSFw&list=PL55RiY5tL51qxUbODJG9cgrsVd7ZHbPrt) available on YouTube that covers pretty much everything you'd want to know about building a fully-featured Vue app.
@@ -64,7 +69,6 @@ All scripts and styles in `/src` are compiled down to the `/dist` directory, whi
 
 ## Features coming soon:
 
-- WordPress menu integration
 - More documentation
 
 # Changelog
