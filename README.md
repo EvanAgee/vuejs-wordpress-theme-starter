@@ -59,19 +59,26 @@ All of the code you're going to edit is located in `/src/`. From there it's brok
   - `/assets/css` CSS styles
   - `/vendor` 3rd party scripts and libraries
 
-All scripts and styles in `/src` are compiled down to the `/dist` directory, which is what you will deploy. **When you're ready to deploy don't deploy the src/ directory.**
+All scripts and styles in `/src` are compiled down to the `/dist` directory, which is what you  will deploy. **When you're ready to deploy don't deploy the src/ directory.**
 
 ## External References
 
 - [Creating Vuex Modules](https://vuex.vuejs.org/en/modules.html)
 - [vue-router](https://github.com/vuejs/vue-router)
 - [WordPress REST API](http://v2.wp-api.org/)
+- [WordPress REST API Handbook](https://developer.wordpress.org/rest-api/)
+- [Expose ACF fields to REST API](https://github.com/airesvsg/acf-to-rest-api/)
 
 ## Features coming soon:
 
 - More documentation
 
-# Changelog
+# Changeloge
+
+## 2019-08-11
+- Added [tailwindcss](https://tailwindcss.com/docs/installation#using-tailwind-with-postcss) support.
+- updated packages.
+- Added more links to external references.
 
 ## 2019-02-05
 
