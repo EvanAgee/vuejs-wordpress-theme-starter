@@ -10,6 +10,9 @@ import Page from "../components/Page/Page.vue";
 Vue.use(Router);
 
 const router = new Router({
+  mode: "history",
+  base: "YOUR_PROJECT_PATH",
+  linkActiveClass: 'active-class-name',
   routes: [
     {
       path: "/",
@@ -28,8 +31,6 @@ const router = new Router({
       component: Page
     }
   ],
-  mode: "history",
-  base: "",
 
   // Prevents window from scrolling back to top
   // when navigating between components/views
