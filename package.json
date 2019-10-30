@@ -23,7 +23,7 @@
     "css-loader": "^0.28.7",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.4",
-    "lodash": "^4.17.10",
+    "lodash": "^4.17.13",
     "normalize.css": "^8.0.0",
     "object-path": "^0.11.4",
     "postcss-assets": "^5.0.0",
