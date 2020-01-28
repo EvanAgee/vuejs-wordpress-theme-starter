@@ -1,4 +1,4 @@
-![image](http://res.cloudinary.com/evanagee/image/upload/v1507763167/VueWP/vue-wordpress-sitting-in-a-tree.jpg)
+![image](https://res.cloudinary.com/evanagee/image/upload/c_scale,w_700/v1580244758/VueWP/VWP-hero.png)
 
 # vuejs-wordpress-theme-starter
 
@@ -20,11 +20,13 @@ A true WordPress theme with the guts ripped out and replaced with Vue.
 
 [![Watch the getting started video](http://res.cloudinary.com/evanagee/image/upload/v1508649085/VueWP/youtube.jpg)](https://www.youtube.com/watch?v=dFTsbSRJuIw)
 
-- Clone the repo inside of your `wp-content/themes/` directory
-- Navigate to the theme directory and run
+- **Clone the repo** inside of your `wp-content/themes/` directory
+- Navigate to the theme directory in your terminal and run
   `npm install`
   `npm run watch` for development
   `npm run production` when you're ready to deploy the theme.
+- **Activate the theme** in your WordPress instance.
+- **Update your permalink settings** `(Settings -> Permalinks)` to be **"Day and name"**. If you don't want to use this setting you'll need to update the Vue router so it can find your content correctly.
 
 ## Video Training
 
@@ -73,21 +75,29 @@ All scripts and styles in `/src` are compiled down to the `/dist` directory, whi
 
 # Changelog
 
-## 2019-02-05
+**2020-01-28**
 
-### Added
+- Updated npm packages
+- New theme screenshot
+- Updated README
+- Updated Home component
+
+---
+
+**2019-02-05**
+**Added**
 
 - Support for postcss
 - New css style examples
 - Cache busters for js and css
 
-### Changed
+**Changed**
 
 - Updated outdated npm packages
 - Recent post and Page widgets to use router-link
 - Removed Laravel Mix and replaced with standard webpack config
 
-### Removed
+**Removed**
 
 - Example Firebase integration
 - jQuery
@@ -96,9 +106,10 @@ All scripts and styles in `/src` are compiled down to the `/dist` directory, whi
 - Several variables that were stored on the window object
 - Support for sass styling (switched to postcss)
 
-## 2018-08-20
+---
 
-### Added
+**2018-08-20**
+**Added**
 
 - Default routing for posts and pages. @EvanAgee
 - Views for posts and pages. @EvanAgee
@@ -107,19 +118,19 @@ All scripts and styles in `/src` are compiled down to the `/dist` directory, whi
 - Activated LocalStorage plugin in store. @EvanAgee
 - Loader component. @EvanAgee
 
-### Removed
+**Removed**
 
 - UglifyJS. @EvanAgee
 
-## 2017-10-24
+---
 
-### Added
+**2017-10-24**
+**Added**
 
 - status_header(200) to keep Wordpress from returning 404 for vue-router paths.
 
-## 2017-10-21
-
-### Removed
+**2017-10-21**
+**Removed**
 
 - vue-slick dependency
 - vue2-google-maps dependency
@@ -127,30 +138,26 @@ All scripts and styles in `/src` are compiled down to the `/dist` directory, whi
 - the-tailor dependency
 - font-awesome dependency
 
-### Changed
+**Changed**
 
 - Updated webpack (Larevel Mix) config
 - Switched from Bootstrap to [Bootstrap-Vue](https://bootstrap-vue.js.org)
 
-### Fixed
+**Fixed**
 
 - Fixed index.php
 
 ---
 
-## 2017-10-17
-
-### Added
+**2017-10-17**
+**Added**
 
 - More documnentation. @EvanAgee
 - Post module. @EvanAgee
 - A few code comments. @EvanAgee
 - Example widgets for posts and pages. @EvanAgee
 
-## Changed
+**Changed -** Home page to display the posts and pages widgets. @EvanAgee
 
-- Home page to display the posts and pages widgets. @EvanAgee
-
-## 2017-10-11
-
+**2017-10-11**
 Initial commit
