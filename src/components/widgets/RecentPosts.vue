@@ -1,6 +1,6 @@
 <template>
   <div class="widget recent-posts">
-    <h3>
+    <h3 class="text-xl font-bold">
       <slot></slot>
     </h3>
     <ul v-if="recentPostsLoaded">
@@ -13,19 +13,19 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters } from 'vuex';
 
 export default {
-  props: ["limit"],
+  props: ['limit'],
   computed: {
     ...mapGetters({
-      recentPosts: "recentPosts",
-      recentPostsLoaded: "recentPostsLoaded"
-    })
+      recentPosts: 'recentPosts',
+      recentPostsLoaded: 'recentPostsLoaded',
+    }),
   },
 
   mounted() {
-    this.$store.dispatch("getPosts", { limit: this.limit });
-  }
+    this.$store.dispatch('getPosts', { limit: this.limit });
+  },
 };
 </script>

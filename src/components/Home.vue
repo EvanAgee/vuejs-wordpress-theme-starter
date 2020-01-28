@@ -1,13 +1,11 @@
 <template>
   <div class="page page--home">
     <a href="https://vuewordpress.com">
-      <img
-        src="https://res.cloudinary.com/evanagee/image/upload/c_scale,w_700/v1580244758/VueWP/VWP-hero.png"
-      />
+      <img src="https://res.cloudinary.com/evanagee/image/upload/c_scale,w_700/v1580244758/VueWP/VWP-hero.png" />
     </a>
-    <h3>Welcome!</h3>
+    <h3 class="text-3xl font-bold mt-6">Welcome!</h3>
     <p>You'll probably want to remove all of this stuff, but hey it at least it works!</p>
-    <p>
+    <p class="mb-10">
       ~
       <a href="https://evanagee.com/">Evan Agee</a>
     </p>
@@ -20,14 +18,14 @@
 </template>
 
 <script>
-import RecentPostsWidget from "./widgets/RecentPosts.vue";
-import PagesWidget from "./widgets/Pages.vue";
+import RecentPostsWidget from './widgets/RecentPosts.vue';
+import PagesWidget from './widgets/Pages.vue';
 
 export default {
   components: {
     RecentPostsWidget,
-    PagesWidget
-  }
+    PagesWidget,
+  },
 };
 </script>
 

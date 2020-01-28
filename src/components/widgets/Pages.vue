@@ -1,6 +1,6 @@
 <template>
   <div class="widget pages">
-    <h3>
+    <h3 class="text-xl font-bold">
       <slot></slot>
     </h3>
     <ul v-if="allPagesLoaded">
@@ -13,17 +13,17 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters } from 'vuex';
 
 export default {
-  props: ["limit"],
+  props: ['limit'],
   computed: {
     ...mapGetters({
-      somePages: "somePages",
-      allPagesLoaded: "allPagesLoaded"
-    })
+      somePages: 'somePages',
+      allPagesLoaded: 'allPagesLoaded',
+    }),
   },
 
-  mounted() {}
+  mounted() {},
 };
 </script>

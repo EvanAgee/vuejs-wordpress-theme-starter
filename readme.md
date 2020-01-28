@@ -8,6 +8,7 @@ A true WordPress theme with the guts ripped out and replaced with Vue.
 
 ## Features
 
+- [Tailwind](https://tailwindcss.com/) is built in! If you don't want Tailwindcss in your project you can easily disable it by removing the import statement in `styles.css`.
 - [VueRouter](https://github.com/vuejs/vue-router) integrated
 - [Vuex](https://github.com/vuejs/vuex) integrated (with sample WordPress-centric modules)
 - [Axios](https://github.com/axios/axios) for API requests
@@ -68,6 +69,8 @@ All scripts and styles in `/src` are compiled down to the `/dist` directory, whi
 - [Creating Vuex Modules](https://vuex.vuejs.org/en/modules.html)
 - [vue-router](https://github.com/vuejs/vue-router)
 - [WordPress REST API](http://v2.wp-api.org/)
+- [WordPress REST API Handbook](https://developer.wordpress.org/rest-api/)
+- [Expose ACF fields to REST API](https://github.com/airesvsg/acf-to-rest-api/)
 
 ## Features coming soon:
 
@@ -83,6 +86,11 @@ All scripts and styles in `/src` are compiled down to the `/dist` directory, whi
 - Updated Home component
 
 ---
+
+**2020-01-28**
+
+- Added [tailwindcss](https://tailwindcss.com/docs/installation#using-tailwind-with-postcss) support.
+- Added more links to external references.
 
 **2019-02-05**
 **Added**
