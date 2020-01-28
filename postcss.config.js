@@ -1,30 +1,31 @@
 module.exports = {
   plugins: {
     autoprefixer: { grid: true },
-    "postcss-import": {},
-    "postcss-cssnext": {
+    'postcss-import': {},
+    'postcss-cssnext': {
       warnForDuplicates: false,
       map: true,
       remove: false,
-      browsers: ["> 1%", "IE 11"],
+      browsers: ['> 1%', 'IE 11'],
       extensions: {
-        "--phone": "(min-width: 544px)",
-        "--tablet": "(min-width: 768px)",
-        "--desktop": "(min-width: 992px)",
-        "--large-desktop": "(min-width: 1200px)"
-      }
+        '--phone': '(min-width: 544px)',
+        '--tablet': '(min-width: 768px)',
+        '--desktop': '(min-width: 992px)',
+        '--large-desktop': '(min-width: 1200px)',
+      },
     },
-    "postcss-inherit": {},
-    "postcss-assets": {},
-    "postcss-nested": {},
+    'postcss-inherit': {},
+    'postcss-assets': {},
+    'postcss-nested': {},
     cssnano: {
       reduceIdents: false,
-      zindex: false
+      zindex: false,
     },
-    "postcss-hexrgba": {},
-    "postcss-reporter": {
-      clearMessages: true
-    }
+    'postcss-hexrgba': {},
+    'postcss-reporter': {
+      clearMessages: true,
+    },
+    tailwindcss: './tailwind.config.js',
   },
-  sourceMap: true || "inline"
+  sourceMap: true || 'inline',
 };
