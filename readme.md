@@ -18,7 +18,7 @@ A true WordPress theme with the guts ripped out and replaced with Vue.
 
 ## Getting started
 
-[![Watch the getting started video](http://res.cloudinary.com/evanagee/image/upload/v1508649085/VueWP/youtube.jpg)](https://www.youtube.com/watch?v=dFTsbSRJuIw)
+[![Watch the getting started video](https://res.cloudinary.com/evanagee/image/upload/c_scale,w_1000/v1580251167/VueWP/getting-started-youtube2.jpg)](https://www.youtube.com/watch?v=xF-ZVrk7N5g)
 
 - **Clone the repo** inside of your `wp-content/themes/` directory
 - Navigate to the theme directory in your terminal and run
@@ -30,7 +30,7 @@ A true WordPress theme with the guts ripped out and replaced with Vue.
 
 ## Video Training
 
-- [Getting Started](https://www.youtube.com/watch?v=dFTsbSRJuIw)
+- [Getting Started](https://www.youtube.com/watch?v=xF-ZVrk7N5g)
 - [How to add WordPress menu support](https://www.youtube.com/watch?v=fa_muCUHUuM)
 
 ## New to Vue?
