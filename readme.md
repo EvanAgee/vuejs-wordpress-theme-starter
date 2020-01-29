@@ -98,6 +98,8 @@ The first thing you're probably going to want to do is start editing and compone
 - npm module updates
 - updated to latest version of Vuejs
 
+---
+
 **2019-02-05**
 **Added**
 
@@ -171,7 +173,11 @@ The first thing you're probably going to want to do is start editing and compone
 - A few code comments. @EvanAgee
 - Example widgets for posts and pages. @EvanAgee
 
-**Changed -** Home page to display the posts and pages widgets. @EvanAgee
+**Changed**
+
+- Home page to display the posts and pages widgets. @EvanAgee
+
+---
 
 **2017-10-11**
 Initial commit
