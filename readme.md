@@ -90,7 +90,8 @@ All scripts and styles in `/src` are compiled down to the `/dist` directory, whi
 **2020-01-28**
 
 - Added [tailwindcss](https://tailwindcss.com/docs/installation#using-tailwind-with-postcss) support.
-- Added more links to external references.
+- npm module updates
+- updated to latest version of Vuejs
 
 **2019-02-05**
 **Added**
