@@ -1,4 +1,12 @@
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+.logo-cls-1[data-v-1ce444b6]{
+  fill:#fff
+}
+.site-header[data-v-1ce444b6]{
+  background:-webkit-gradient(linear,left top,right top,from(#92025f),to(#3b1e58));
+  background:linear-gradient(90deg,#92025f,#3b1e58)
+}.page-content[data-v-3eaf23d0] p{
+  margin-bottom:1rem
+}/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
    ========================================================================== */
@@ -39301,13 +39309,4 @@ h3{
   .xl\:z-auto{
     z-index:auto;
   }
-}.page-content[data-v-3eaf23d0] p{
-  margin-bottom:1rem
-}.logo-cls-1[data-v-1ce444b6]{
-  fill:#fff
 }
-.site-header[data-v-1ce444b6]{
-  background:-webkit-gradient(linear,left top,right top,from(#92025f),to(#3b1e58));
-  background:linear-gradient(90deg,#92025f,#3b1e58)
-}
-/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdHlsZXMuY3NzIiwic291cmNlUm9vdCI6IiJ9*/
