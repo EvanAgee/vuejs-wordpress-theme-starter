@@ -36,7 +36,7 @@ A true WordPress theme with the guts ripped out and replaced with Vue.
 
 ## Video Training
 
-- [Follow us on YouTube]()
+- [Subscribe on YouTube](https://www.youtube.com/channel/UCg8pbW81_DtpPZGiZMpJRyw)
 - [Getting Started](https://www.youtube.com/watch?v=xF-ZVrk7N5g)
 - [How to add WordPress menu support](https://www.youtube.com/watch?v=sCT7jQEbXxc)
 
@@ -83,6 +83,16 @@ The first thing you're probably going to want to do is start editing and compone
 - More documentation
 
 # Changelog
+
+**2020-01-29**
+
+- Removed some legacy CSS, further integrated Tailwind.
+- Added browser-sync!
+- Reorganized and updated the webpack config and files.
+- Updated many npm packages including webpack
+- Updated webpack production minification/optimization settings.
+
+---
 
 **2020-01-28**
 
