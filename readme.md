@@ -2,6 +2,16 @@
 
 [![Tweet](https://img.shields.io/twitter/url/https/github.com/tterb/hyde.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20Hyde!%20%E2%9C%A8%20An%20accessible,%20open-source%20markdown%20editor%20for%20any%20user%20E2%9C%A8%20https://github.com/tterb/hyde%20%F0%9F%A4%97) [![Twitter Follow](https://img.shields.io/twitter/follow/VueWord.svg?style=social)](https://twitter.com/VueWord)
 
+- [VueWordPress Theme Starter](#vuewordpress-theme-starter)
+  - [Features](#features)
+  - [Getting started](#getting-started)
+  - [Video Training](#video-training)
+  - [Code Organization](#code-organization)
+  - [New to Vue?](#new-to-vue)
+  - [External References](#external-references)
+  - [Features coming soon:](#features-coming-soon)
+- [Changelog](#changelog)
+
 # VueWordPress Theme Starter
 
 A true WordPress theme with the guts ripped out and replaced with Vue.
