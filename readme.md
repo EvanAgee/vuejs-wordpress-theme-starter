@@ -13,6 +13,7 @@ A true WordPress theme with the guts ripped out and replaced with Vue.
 ## Features
 
 - [Tailwind](https://tailwindcss.com/) is built in! If you don't want Tailwindcss in your project you can easily disable it by removing the import statement in `styles.css`.
+- **Hot reloading/browsersync** for local development.
 - [VueRouter](https://github.com/vuejs/vue-router) integrated
 - [Vuex](https://github.com/vuejs/vuex) integrated (with sample WordPress-centric modules)
 - [Axios](https://github.com/axios/axios) for API requests
