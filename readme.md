@@ -36,8 +36,9 @@ A true WordPress theme with the guts ripped out and replaced with Vue.
 
 ## Video Training
 
+- [Follow us on YouTube]()
 - [Getting Started](https://www.youtube.com/watch?v=xF-ZVrk7N5g)
-- [How to add WordPress menu support](https://www.youtube.com/watch?v=fa_muCUHUuM)
+- [How to add WordPress menu support](https://www.youtube.com/watch?v=sCT7jQEbXxc)
 
 ## Code Organization
 
