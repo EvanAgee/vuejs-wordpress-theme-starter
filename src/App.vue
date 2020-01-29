@@ -7,7 +7,7 @@
     </transition>
 
     <transition name="page-transition" mode="out-in" appear>
-      <div class="container mx-auto py-16 flex-1 px-10 md:px-0">
+      <div class="site-content mx-auto py-16 flex-1 px-10 md:px-0 max-w-2xl">
         <router-view></router-view>
       </div>
     </transition>

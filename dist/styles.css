@@ -1,12 +1,4 @@
-.logo-cls-1[data-v-1ce444b6]{
-  fill:#fff
-}
-.site-header[data-v-1ce444b6]{
-  background:-webkit-gradient(linear,left top,right top,from(#92025f),to(#3b1e58));
-  background:linear-gradient(90deg,#92025f,#3b1e58)
-}.page-content[data-v-3eaf23d0] p{
-  margin-bottom:1rem
-}/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
    ========================================================================== */
@@ -621,20 +613,32 @@ video {
 }
 
 h1,h2,h3,h4,h5{
-  font-weight:600
+  font-weight:400;
+  margin-bottom:0.5rem
 }
 
 h1{
-  font-size:2.25rem;
-  font-weight:300
+  font-size:3rem;
+  font-weight:100
 }
 
 h2{
-  font-size:1.875rem
+  font-size:2.25rem
 }
 
 h3{
-  font-size:1.5rem
+  font-size:1.25rem;
+  text-transform:uppercase;
+  letter-spacing:0.1em;
+  font-weight:600
+}
+
+h4{
+  font-size:1.25rem
+}
+
+.site-content p{
+  margin-bottom:1.25rem
 }
 
 .loader .progress-bar{
@@ -39309,4 +39313,13 @@ h3{
   .xl\:z-auto{
     z-index:auto;
   }
+}.page-content[data-v-3eaf23d0] p{
+  margin-bottom:1rem
+}.logo-cls-1[data-v-1ce444b6]{
+  fill:#fff
 }
+.site-header[data-v-1ce444b6]{
+  background:-webkit-gradient(linear,left top,right top,from(#92025f),to(#3b1e58));
+  background:linear-gradient(90deg,#92025f,#3b1e58)
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdHlsZXMuY3NzIiwic291cmNlUm9vdCI6IiJ9*/

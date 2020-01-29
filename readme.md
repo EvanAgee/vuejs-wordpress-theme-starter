@@ -1,6 +1,6 @@
 [![image](https://res.cloudinary.com/evanagee/image/upload/c_scale,w_700/v1580244758/VueWP/VWP-hero.png)](https://vuewordpress.com)
 
-[![GitHub stars](https://img.shields.io/github/stars/badges/shields.svg?style=social&label=Stars&style=plastic)]() [![GitHub watchers](https://img.shields.io/github/watchers/badges/shields.svg?style=social&label=Watch&style=plastic)]() [![GitHub forks](https://img.shields.io/github/forks/badges/shields.svg?style=social&label=Fork&style=plastic)]() [![Tweet](https://img.shields.io/twitter/url/https/github.com/tterb/hyde.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20Hyde!%20%E2%9C%A8%20An%20accessible,%20open-source%20markdown%20editor%20for%20any%20user%20E2%9C%A8%20https://github.com/tterb/hyde%20%F0%9F%A4%97) [![Twitter Follow](https://img.shields.io/twitter/follow/VueWord.svg?style=social)](https://twitter.com/VueWord)
+[![Tweet](https://img.shields.io/twitter/url/https/github.com/tterb/hyde.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20Hyde!%20%E2%9C%A8%20An%20accessible,%20open-source%20markdown%20editor%20for%20any%20user%20E2%9C%A8%20https://github.com/tterb/hyde%20%F0%9F%A4%97) [![Twitter Follow](https://img.shields.io/twitter/follow/VueWord.svg?style=social)](https://twitter.com/VueWord)
 
 # VueWordPress Theme Starter
 
@@ -34,6 +34,8 @@ A true WordPress theme with the guts ripped out and replaced with Vue.
 3. **Activate the theme** in your WordPress instance.
 4. **Update your permalink settings** `(Settings -> Permalinks)` to be **"Day and name"**. If you don't want to use this setting you'll need to update the Vue router so it can find your content correctly. Please note that if you want to use a different permalink structure you'll need to update `./src/router/index.js` so it looks for the correct path.
 5. Boom.com!
+
+Since by default Tailwind completely resets all styles/spacing, there are a few initial styles I've provided in `src/assets/css/_tailwind.css` to make things appear more like you'd expect. Modify to your liking!
 
 ## Video Training
 

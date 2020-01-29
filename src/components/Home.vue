@@ -4,7 +4,10 @@
       <img src="https://res.cloudinary.com/evanagee/image/upload/c_scale,w_700/v1580244758/VueWP/VWP-hero.png" />
     </a>
     <h1 class="mt-6">Welcome!</h1>
-    <p>You'll probably want to remove all of this stuff, but hey it at least it works!</p>
+    <p>
+      You'll probably want to remove all of this stuff, but hey it at least it works!
+    </p>
+    <p>If you'd like to edit the contents of this page take a look at <code>src/components/Home.vue</code></p>
     <p class="mb-10">
       ~
       <a href="https://evanagee.com/">Evan Agee</a>

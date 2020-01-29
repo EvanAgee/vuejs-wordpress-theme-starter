@@ -1,28 +1,40 @@
 @tailwind base;
 @tailwind components;
 
+/* Begin tailwind customizations */
+
 h1,
 h2,
 h3,
 h4,
 h5 {
-  @apply font-semibold;
+  @apply font-normal mb-2;
 }
 
 h1 {
-  @apply text-4xl font-light;
+  @apply text-5xl font-hairline;
 }
 
 h2 {
-  @apply text-3xl;
+  @apply text-4xl;
 }
 
 h3 {
-  @apply text-2xl;
+  @apply text-xl uppercase tracking-widest font-semibold;
+}
+
+h4 {
+  @apply text-xl;
+}
+
+.site-content p {
+  @apply mb-5;
 }
 
 .loader .progress-bar {
   @apply bg-teal-500;
 }
+
+/* end tailwind customizations */
 
 @tailwind utilities;
