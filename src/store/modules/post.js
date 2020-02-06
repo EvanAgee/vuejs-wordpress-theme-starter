@@ -1,10 +1,9 @@
-import api from "../../api";
-import _ from "lodash";
-import * as types from "../mutation-types";
+import api from '../../api';
+import * as types from '../mutation-types';
 
 const createPostSlug = post => {
-  let slug = post.link.replace("http://" + window.location.hostname, "");
-  slug = slug.replace("https://" + window.location.hostname, "");
+  let slug = post.link.replace('http://' + window.location.hostname, '');
+  slug = slug.replace('https://' + window.location.hostname, '');
   post.slug = slug;
   return post;
 };
@@ -12,7 +11,7 @@ const createPostSlug = post => {
 // initial state
 const state = {
   recent: [],
-  loaded: false
+  loaded: false,
 };
 
 // getters
@@ -20,9 +19,8 @@ const getters = {
   recentPosts: state => limit => {
     if (
       !limit ||
-      !_.isNumber(limit) ||
-      _.isNull(limit) ||
-      typeof limit == "undefined"
+      !Number.isInteger(limit) ||
+      typeof limit == 'undefined'
     ) {
       return state.recent;
     }
@@ -30,7 +28,7 @@ const getters = {
     return recent.slice(0, limit);
   },
 
-  recentPostsLoaded: state => state.loaded
+  recentPostsLoaded: state => state.loaded,
 };
 
 // actions
@@ -45,7 +43,7 @@ const actions = {
       commit(types.POSTS_LOADED, true);
       commit(types.INCREMENT_LOADING_PROGRESS);
     });
-  }
+  },
 };
 
 // mutations
@@ -56,12 +54,12 @@ const mutations = {
 
   [types.POSTS_LOADED](state, val) {
     state.loaded = val;
-  }
+  },
 };
 
 export default {
   state,
   getters,
   actions,
-  mutations
+  mutations,
 };

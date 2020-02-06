@@ -1,13 +1,11 @@
-import api from "../../api";
-import _ from "lodash";
-import * as types from "../mutation-types";
-import { isNumber } from "util";
+import api from '../../api';
+import * as types from '../mutation-types';
 
 // initial state
 const state = {
   all: [],
   loaded: false,
-  page: null
+  page: null,
 };
 
 // getters
@@ -15,16 +13,15 @@ const getters = {
   allPages: state => state.all,
   allPagesLoaded: state => state.loaded,
   page: state => id => {
-    let field = typeof id === "number" ? "id" : "slug";
+    let field = typeof id === 'number' ? 'id' : 'slug';
     let page = state.all.filter(page => page[field] === id);
-    return !_.isNull(_.first(page)) ? _.first(page) : false;
+    return (page[0]) ? page : false;
   },
   pageContent: state => id => {
-    let field = typeof id === "number" ? "id" : "slug";
+    let field = typeof id === 'number' ? 'id' : 'slug';
     let page = state.all.filter(page => page[field] === id);
-    return !_.isNull(_.first(page).content.rendered)
-      ? _.first(page).content.rendered
-      : false;
+    
+    return (page[0]) ? page[0].content.rendered : false;
   },
   somePages: state => limit => {
     if (state.all.length < 1) {
@@ -32,7 +29,7 @@ const getters = {
     }
     let all = [...state.all];
     return all.splice(0, Math.min(limit, state.all.length));
-  }
+  },
 };
 
 // actions
@@ -43,7 +40,7 @@ const actions = {
       commit(types.PAGES_LOADED, true);
       commit(types.INCREMENT_LOADING_PROGRESS);
     });
-  }
+  },
 };
 
 // mutations
@@ -54,12 +51,12 @@ const mutations = {
 
   [types.PAGES_LOADED](state, val) {
     state.loaded = val;
-  }
+  },
 };
 
 export default {
   state,
   getters,
   actions,
-  mutations
+  mutations,
 };
