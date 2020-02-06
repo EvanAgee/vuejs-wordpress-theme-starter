@@ -1,5 +1,4 @@
 import api from '../../api';
-// import _ from 'lodash';
 import * as types from '../mutation-types';
 
 const createPostSlug = post => {

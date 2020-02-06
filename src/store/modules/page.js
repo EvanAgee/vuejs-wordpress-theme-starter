@@ -1,7 +1,5 @@
 import api from '../../api';
-// import _ from 'lodash';
 import * as types from '../mutation-types';
-// import { isNumber } from 'util';
 
 // initial state
 const state = {
