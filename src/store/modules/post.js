@@ -3,7 +3,6 @@ import * as types from '../mutation-types';
 
 const createPostSlug = post => {
   let slug = post.link.replace(window.location.protocol + '//' + window.location.host, '');
-  
   post.slug = slug;
   return post;
 };
