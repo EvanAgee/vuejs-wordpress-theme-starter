@@ -21,7 +21,6 @@
     "cssnano": "^4.1.10",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.11",
-    "lodash": "^4.17.15",
     "normalize.css": "^8.0.0",
     "object-path": "^0.11.4",
     "path": "^0.12.7",
