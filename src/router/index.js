@@ -44,13 +44,6 @@ const router = new Router({
 router.afterEach((to) => { // (to, from)
   // Add a body class specific to the route we're viewing
   let body = document.querySelector('body');
-  // let bodyClasses = body.className.split(' ');
-
-  // if (bodyClasses.length > 0) {
-  //   const newBodyClasses = bodyClasses.filter(theClass =>
-  //     theClass.startsWith('vue--page--')
-  //   );
-  // }
 
   const slug = !(to.params.postSlug)
     ? to.params.pageSlug
