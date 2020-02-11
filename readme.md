@@ -14,7 +14,7 @@
 
 # VueWordPress Theme Starter
 
-A true WordPress theme with the guts ripped out and replaced with Vue.
+A true WordPress theme with the guts ripped out and replaced with Vue. **Looking to create a Vue-powered WordPress plugin? [I've got a starter for that too!](https://github.com/EvanAgee/vuejs-wordpress-plugin-starter)**
 
 **Who's this for?** When I started diving into using Vue in WordPress I found plenty of great starters for headless WordPress, but I had the added constraint of needing to run the front and backend on the same host, thus this project was created.
 
