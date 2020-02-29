@@ -15,7 +15,7 @@ const getters = {
   page: state => id => {
     let field = typeof id === 'number' ? 'id' : 'slug';
     let page = state.all.filter(page => page[field] === id);
-    return (page[0]) ? page : false;
+    return (page[0]) ? page[0] : false;
   },
   pageContent: state => id => {
     let field = typeof id === 'number' ? 'id' : 'slug';
