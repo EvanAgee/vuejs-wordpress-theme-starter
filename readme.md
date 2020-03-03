@@ -18,7 +18,7 @@ A true WordPress theme with the guts ripped out and replaced with Vue. **Looking
 
 **Who's this for?** When I started diving into using Vue in WordPress I found plenty of great starters for headless WordPress, but I had the added constraint of needing to run the front and backend on the same host, thus this project was created.
 
-**Need help? [Join the VueWordPress Slack](https://join.slack.com/t/vuewordpress/shared_invite/enQtMjg5NzAzMzY5Mzk0LWRhZGQ4OGIxNWY3NzYwMjY1NjdhOWQyZWU0ZmJkY2E1ODg2YWU5MjlkZjgxYWM4NTk4OTM5NWMwNWRkOTMyZWI).**
+**Need help? [Join the VueWordPress Slack](https://join.slack.com/t/vuewordpress/shared_invite/enQtMjg5NzAzMzY5Mzk0LTk2YjljNmIxZDk2Y2IzNDc2NzI3M2M3M2FhNjJkZjE5YWNhNmU5OWExZjI5YjRiMjcwYzk3ZWViMWIyMWE1MDY).**
 
 ## Features
 
