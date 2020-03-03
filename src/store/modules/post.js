@@ -2,8 +2,7 @@ import api from '../../api';
 import * as types from '../mutation-types';
 
 const createPostSlug = post => {
-  let slug = post.link.replace('http://' + window.location.hostname, '');
-  slug = slug.replace('https://' + window.location.hostname, '');
+  let slug = post.link.replace(window.location.protocol + '//' + window.location.host, '');
   post.slug = slug;
   return post;
 };
