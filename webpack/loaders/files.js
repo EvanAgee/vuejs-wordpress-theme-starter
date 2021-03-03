@@ -1,4 +1,4 @@
-const [, themeName] = __dirname.match(/\/wp-content\/themes\/([^/]+)\/webpack\/loaders$/)
+const themeName = __dirname.match(/\/wp-content\/themes\/([^/]+)\/webpack\/loaders$/)
 module.exports = {
   test: /\.(png|svg|jpg|gif)$/,
   use: [
