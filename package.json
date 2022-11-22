@@ -14,7 +14,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.27.10",
     "browser-sync-webpack-plugin": "^2.2.2",
     "cross-env": "^3.2.4",
     "css-loader": "^3.4.2",
