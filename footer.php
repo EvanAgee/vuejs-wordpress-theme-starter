@@ -7,6 +7,7 @@
 		//]]>
 	</script>
 <?php endif; ?>
+<p>Đây là footer</p>
 </body>
 
 </html>
